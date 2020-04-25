@@ -1,0 +1,1107 @@
+<html>
+    <head>
+        <Title>
+            Flight Registration Form
+        </Title>
+        
+ <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script> 
+ 
+ 
+<script src="/__/firebase/7.14.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.14.1/firebase-analytics.js"></script>
+ 
+ 
+ 
+ 
+ 
+ 
+ <script>
+   // Initialize Firebase
+   var config = {
+  apiKey: "AIzaSyBjRQb2aR2QY2tN22nEuUDmnDnMMcFUTnw",
+  authDomain: "airlines-register-and-login.firebaseapp.com",
+  databaseURL: "https://airlines-register-and-login.firebaseio.com",
+  projectId: "airlines-register-and-login",
+  storageBucket: "airlines-register-and-login.appspot.com",
+  messagingSenderId: "1042452549459"
+   };
+
+   firebase.initializeApp(config);
+ </script>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+	<style>
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,body{
+/*background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQpQJrnXAL9GIdeObYKfHjVPmze4b-XFsCPwvA9aHLSEY94L86t&usqp=CAU');*/
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+
+}
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: 100%;
+margin-top: auto;
+margin-bottom: auto;
+width: 900px;
+/*background-color: rgba(0,0,0,0.5) !important;
+*/
+
+}
+
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #FFC312;
+}
+
+.social_icon span:hover{
+color: white;
+cursor: pointer;
+}
+
+.card-header h3{
+color: white;
+}
+
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: #FFC312;
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+color: black;
+background-color: #FFC312;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white;
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+}
+
+#passbtn:hover{
+    color:Red;
+    background-color:yellow;
+    border-radius:70%;
+}
+
+	    
+	    
+	</style>
+        
+        
+    </head>
+    <body>
+        
+        
+<div class="container" >
+	<div class="d-flex justify-content-center">
+		<div class="card" style="color:white">
+			<div class="card-header">
+				<h3 style="color:black">Sign Up</h3>
+			</div>
+			<div class="card-body" style="">
+			  <form class="was-validated">
+			        <table  cellpadding="25" cellspacing="25">
+			           <thread>
+			            <th style="color:red">Required Account Information</th>
+			        </thread>
+			        <tr style="color:black">
+			            <td>FirstName: * <br>
+			            
+                      <lable style="color:blue">(As per passport)</lable> 
+			            </td>
+			            <td>LastName: * <br>
+<lable style="color:blue">(As per passport)</lable> 
+			            
+			            </td>
+			        </tr>
+			        <tr>
+			            <td>
+			              	<div class="input-group form-group">
+						<div class="input-group-prepend">
+							
+						</div>
+						<input type="text" class="form-control" placeholder="FirstName" required   id="fname">
+ <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+						
+				</div>
+			            </td>
+			            <td>
+			                
+			          	<div class="input-group form-group">
+						<div class="input-group-prepend">
+							
+						</div>
+						<input type="text" class="form-control" placeholder="LastName" required   id="lname">
+ <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+						
+				</div>
+			                
+			            </td>
+			        </tr>
+			        <tr>
+			          
+			            
+			            
+			            
+			            <td>
+			                
+			                
+<div class="form-group">
+  <label for="gender">Select Gender:</label>
+  <select class="form-control" id="gender">
+    <option>Select.....</option>
+    <option>Male</option>
+    <option>Female</option>
+  </select>
+</div>
+			                
+			                
+			                
+			            </td>
+			            
+			            
+			           
+			        </tr>
+			        <tr>
+ <td>
+Name On Card: * 
+			                
+			                
+	          	<div class="input-group form-group">
+						<div class="input-group-prepend">
+							
+						</div>
+						
+
+
+						<input type="text" class="form-control" placeholder="Name On Card" required id="NameOnCard">
+ <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+						
+				</div>
+			            </td>
+			            
+ <td>
+Date of birth: *
+
+			                
+	          	<div class="input-group form-group">
+						<div class="input-group-prepend">
+							
+						</div>
+						
+
+
+						<input type="date" class="form-control" id="dob"  placeholder="DOB" required>
+ <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please Fill Date Of Birth.</div>
+						
+				</div>
+			            </td>
+			            
+			            
+			            
+			        </tr>
+<tr>
+    
+			            <td>
+<div class="form-group">
+ <label for="Nationality">Nationality: *</label>
+  <select class="form-control" id="Nationality">
+    <option>Select.......</option>
+    <option>Afghanistan</option>
+
+<option>Albania</option>
+
+<option>Algeria</option>
+
+<option>Argentina</option>
+
+<option>Australia</option>
+
+<option>Austria</option>
+
+<option>Albanian</option>
+<option>Algerian</option>
+<option>Argentine</option>
+<option>Australian</option>
+<option>Austrian</option>
+<option>Bangladesh</option>
+<option>Bengal</option>
+<option>Belgium</option>
+<option>Bolivia</option>
+<option>Botswana</option>
+<option>Brazil</option>
+<option>Bulgaria</option>
+<option>Cambodia</option>
+<option>Cameroon</option>
+<option>Canada</option>
+<option>Chile</option>
+<option>China</option>
+<option>Colombia</option>
+<option>Costa Rica</option>
+<option>Croatia</option>
+<option>Cuba</option>
+<option>Czech</option>
+<option>Republic</option>
+<option>Denmark</option>
+<option>Dominican Republic</option>
+<option>Ecuador</option>
+<option>Egypt</option>
+<option>El Salvador</option>
+<option>England</option>
+<option>Estonia</option>
+<option>Ethiopia</option>
+<option>Fiji</option>
+<option>Finland</option>
+<option>France</option>
+<option>Germany</option>
+<option>Ghana</option>
+<option>Greece</option>
+<option>Guatemala</option>
+<option>Haiti</option>
+<option>Honduras</option>
+<option>Hungary</option>
+<option>Iceland</option>
+<option>India</option>
+<option>Indonesia</option>
+<option>Iran</option>
+<option>Iraq</option>
+<option>Ireland</option>
+<option>Israel</option>
+<option>Italy</option>
+<option>Jamaica</option>
+<option>Japan</option>
+
+  </select>
+</div>
+			                
+			                
+			                
+			            </td>
+			            
+			            
+			           
+			        </tr>
+			        <tr>
+ <td>
+<div class="form-group">
+ <label for="country">Country/Religion Of Residence: *</label>
+  <select class="form-control" id="country">
+    <option>Select.......</option>
+    <option>Afghanistan</option>
+
+<option>Albania</option>
+
+<option>Algeria</option>
+
+<option>Argentina</option>
+
+<option>Australia</option>
+
+<option>Austria</option>
+
+<option>Albanian</option>
+<option>Algerian</option>
+<option>Argentine</option>
+<option>Australian</option>
+<option>Austrian</option>
+<option>Bangladesh</option>
+<option>Bengal</option>
+<option>Belgium</option>
+<option>Bolivia</option>
+<option>Botswana</option>
+<option>Brazil</option>
+<option>Bulgaria</option>
+<option>Cambodia</option>
+<option>Cameroon</option>
+<option>Canada</option>
+<option>Chile</option>
+<option>China</option>
+<option>Colombia</option>
+<option>Costa Rica</option>
+<option>Croatia</option>
+<option>Cuba</option>
+<option>Czech</option>
+<option>Republic</option>
+<option>Denmark</option>
+<option>Dominican Republic</option>
+<option>Ecuador</option>
+<option>Egypt</option>
+<option>El Salvador</option>
+<option>England</option>
+<option>Estonia</option>
+<option>Ethiopia</option>
+<option>Fiji</option>
+<option>Finland</option>
+<option>France</option>
+<option>Germany</option>
+<option>Ghana</option>
+<option>Greece</option>
+<option>Guatemala</option>
+<option>Haiti</option>
+<option>Honduras</option>
+<option>Hungary</option>
+<option>Iceland</option>
+<option>India</option>
+<option>Indonesia</option>
+<option>Iran</option>
+<option>Iraq</option>
+<option>Ireland</option>
+<option>Israel</option>
+<option>Italy</option>
+<option>Jamaica</option>
+<option>Japan</option>
+
+
+  </select>
+</div>
+			                
+			                
+			                
+			            </td>
+			        </tr>
+			       
+			        <tr>
+			            <td>
+			                <lable style="color:blue">
+			                    Travel Document:
+			                </lable>
+			            </td>
+			        </tr>
+			        
+			        
+			        
+			        
+			        <tr>
+			            <td>
+			                
+			            
+			            Passport Number: * 
+			                
+			                
+	          	<div class="input-group form-group">
+						<div class="input-group-prepend">
+							
+						</div>
+						
+
+
+						<input type="number" class="form-control" placeholder="passport Number" required id="PassportNumber">
+ <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+						
+				</div>
+				</td>
+			            <td>
+Passport Expiry Date: * 
+			                
+			                
+	          	<div class="input-group form-group">
+						<div class="input-group-prepend">
+							
+						</div>
+						
+
+
+						<input type="date" class="form-control" placeholder="Passport Expiry Date" required id="PassportExpDate">
+ <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+						
+				</div>
+			            </td>
+			        </tr>
+			        <tr>
+			            <td>
+			                <lable style="color:blue">
+Communication Details:
+			                </lable>
+			                
+			            </td>
+			        </tr>
+			        <tr>
+			            <td>
+			                
+Apartment/ Door No./ Block No.: *
+			                
+			                
+	          	<div class="input-group form-group">
+						<div class="input-group-prepend">
+							
+						</div>
+						
+
+
+						<input type="text" class="form-control" placeholder="" required id="doorNum">
+ <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+						
+				</div>
+			                
+			                
+			                
+			                
+			            </td>
+			            <td>
+Name of Premises / Building / Village:
+			                
+			                
+	          	<div class="input-group form-group">
+						<div class="input-group-prepend">
+							
+						</div>
+						
+
+
+						<input type="text" class="form-control"   id="village"   placeholder="" required>
+ <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+						
+				</div>
+			                
+			               
+			                
+			            </td>
+			        </tr>
+			        <tr>
+			            <td>
+			                
+Road / Street / Post Office: *
+			                
+			                
+	          	<div class="input-group form-group">
+						<div class="input-group-prepend">
+							
+						</div>
+						
+
+
+						<input type="text" class="form-control"  id="PostOffice"  placeholder="" 
+			            </td>
+			            <td>
+Postal Code: *
+			                
+			                
+	          	<div class="input-group form-group">
+						<div class="input-group-prepend">
+							
+						</div>
+						
+
+
+						<input type="text" class="form-control"  id="PostalCode"  placeholder="" required>
+ <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+						
+				</div>
+			                
+			                
+			                
+			            </td>
+			  
+			        </tr>
+			        <tr>
+       <td>
+<div class="form-group">
+ Country: *
+  <select class="form-control" id="country">
+    <option>Select.......</option>
+    <option>Afghanistan</option>
+
+<option>Albania</option>
+
+<option>Algeria</option>
+
+<option>Argentina</option>
+
+<option>Australia</option>
+
+<option>Austria</option>
+
+<option>Albanian</option>
+<option>Algerian</option>
+<option>Argentine</option>
+<option>Australian</option>
+<option>Austrian</option>
+<option>Bangladesh</option>
+<option>Bengal</option>
+<option>Belgium</option>
+<option>Bolivia</option>
+<option>Botswana</option>
+<option>Brazil</option>
+<option>Bulgaria</option>
+<option>Cambodia</option>
+<option>Cameroon</option>
+<option>Canada</option>
+<option>Chile</option>
+<option>China</option>
+<option>Colombia</option>
+<option>Costa Rica</option>
+<option>Croatia</option>
+<option>Cuba</option>
+<option>Czech</option>
+<option>Republic</option>
+<option>Denmark</option>
+<option>Dominican Republic</option>
+<option>Ecuador</option>
+<option>Egypt</option>
+<option>El Salvador</option>
+<option>England</option>
+<option>Estonia</option>
+<option>Ethiopia</option>
+<option>Fiji</option>
+<option>Finland</option>
+<option>France</option>
+<option>Germany</option>
+<option>Ghana</option>
+<option>Greece</option>
+<option>Guatemala</option>
+<option>Haiti</option>
+<option>Honduras</option>
+<option>Hungary</option>
+<option>Iceland</option>
+<option>India</option>
+<option>Indonesia</option>
+<option>Iran</option>
+<option>Iraq</option>
+<option>Ireland</option>
+<option>Israel</option>
+<option>Italy</option>
+<option>Jamaica</option>
+<option>Japan</option>
+
+  </select>
+</div>
+			                
+			                
+			                
+			            </td>
+			           
+			            
+			        </tr>
+			        <tr>
+			            
+ <td>
+Town / City / District: *
+			                
+			                
+	          	<div class="input-group form-group">
+						<div class="input-group-prepend">
+							
+						</div>
+						
+
+
+						<input type="text" class="form-control"  id="City"   placeholder="" required>
+ <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+						
+				</div>
+			                
+			                
+			                
+			            </td>
+			            
+			        </tr>
+			        <tr>
+			            <td colspan="2">
+			                <label style="color:blue">
+
+You are required to validate these OTP to complete your enrollment.
+			                </label>
+			            </td>
+			        </tr>
+			        
+			        <tr>
+			            <td>
+			                
+Mobile Number: *
+			                
+			                
+	          	<div class="input-group form-group">
+						<div class="input-group-prepend">
+							
+						</div>
+						
+
+
+						<input type="number" class="form-control"  id="MobileNum" placeholder="" 
+						required>
+ <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+						
+				</div>
+			                
+			                
+			            </td>
+			            <td>
+Another Number: *
+			                
+			                
+	          	<div class="input-group form-group">
+						<div class="input-group-prepend">
+							
+						</div>
+						
+
+
+						<input type="number" class="form-control" id="MobileNum2"
+						placeholder="" required>
+ <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+						
+				</div>
+			                
+			                
+			                
+			            </td>
+			            
+			        </tr>
+			        <tr>
+			            <td>
+Email Address: *
+			                
+			                
+	          	<div class="input-group form-group">
+						<div class="input-group-prepend">
+							
+						</div>
+						
+
+
+						<input type="email" class="form-control" id="email"
+						placeholder="" required>
+ <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+						
+				</div>
+			                
+			                
+			                
+			            </td>
+			            
+			            <td>
+Re-enter Email: *
+			                
+			                
+	          	<div class="input-group form-group">
+						<div class="input-group-prepend">
+							
+						</div>
+						
+
+
+						<input type="email" class="form-control" id="email2"
+						placeholder="" required>
+ <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+						
+				</div>
+			                
+			                
+			                
+			            </td>
+			          
+			            
+			            
+			        </tr>
+			        <tr>
+			            <td>
+Create Password: *
+			                
+			                
+	          	<div class="input-group form-group">
+						<div class="input-group-prepend">
+							
+						</div>
+						
+
+
+					<input type="password" id="psw" name="psw"   class="form-control"   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>  
+			                
+			                
+			                
+			            </td>
+			            
+			            <td>
+Re-enter Password: *
+			                
+			                
+	          	<div class="input-group form-group">
+						<div class="input-group-prepend">
+							
+						</div>
+						
+
+
+						<input type="password" id="psw2" name="psw2"   class="form-control"   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>  
+			                
+			                
+			            </td>
+			            
+			            
+			            
+			            
+			            
+			        </tr>
+			        <tr>
+			            <td colspan="2">
+	<div class="form-group">
+						<input type="button" value="Register" class="btn btn-success float-right login_btn" id="passbtn"  onclick="Register()">
+					</div>
+			                
+			                
+			                
+			            </td>
+			        </tr>
+			        
+			        
+			    </table>
+ <h3>Users List</h3>
+ 
+ <table id="tbl_users_list" border="1">
+  <tr>
+   <td>#ID</td>
+   <td>NAME</td>
+ <td>#ID</td>
+   <td>NAME</td>
+   <td>#ID</td>
+   <td>NAME</td>
+ <td>#ID</td>
+   <td>NAME</td>
+<td>#ID</td>
+   <td>NAME</td>
+ <td>#ID</td>
+   <td>NAME</td>
+   <td>#ID</td>
+   <td>NAME</td>
+ <td>#ID</td>
+   <td>NAME</td>
+   
+   
+   
+   
+  </tr>
+ </table>
+ 
+			    
+			    
+			    
+			    
+<div class="card-footer">
+				<div class="d-flex justify-content-center links" style="color:black">
+					If You Already Register?<a href="content://com.google.android.apps.nbu.files.provider/1/file%3A%2F%2F%2Fstorage%2Femulated%2F0%2Fdbms_project%2FRegistrationForm.html">Sign In</a>
+				</div>
+			
+			</div>
+			    
+			    
+			  </form>
+			    
+			  
+				
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+<script>
+ 
+  var tblUsers = document.getElementById('tbl_users_list');
+  var databaseRef = firebase.database().ref('Register/');
+  var rowIndex = 1;
+  
+  databaseRef.once('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+   var childKey = childSnapshot.key;
+   var childData = childSnapshot.val();
+   
+   var row = tblUsers.insertRow(rowIndex);
+   var cellId = row.insertCell(0);
+   var cellFName = row.insertCell(1);
+   var cellLName = row.insertCell(2);
+   var cellGender = row.insertCell(3);
+   var cellNameOnCard = row.insertCell(4);
+   var cellDOB = row.insertCell(5);
+   var cellNationality = row.insertCell(6);
+   var cellCountry = row.insertCell(7);
+   var PassportNumber = row.insertCell(8);
+   var PassportExpDate = row.insertCell(9);
+   var DoorNum = row.insertCell(10);
+   var Village = row.insertCell(11);
+   var PostOffice = row.insertCell(12);
+   var PostalCode = row.insertCell(13);
+   var country = row.insertCell(14);
+   var City = row.insertCell(15);
+   var MobileNum = row.insertCell(16);
+   var  AnMobileNum= row.insertCell(17);
+   var Email = row.insertCell(18);
+   var  Password= row.insertCell(19);
+   
+   
+   
+   
+   
+   
+   cellId.appendChild(document.createTextNode(childKey));
+   cellFName.appendChild(document.createTextNode(childData.fname));
+cellLName.appendChild(document.createTextNode(childData.lname));
+cellGender.appendChild(document.createTextNode(childData.gender));
+cellNameOnCard.appendChild(document.createTextNode(childData.NameOnCard));
+cellDOB.appendChild(document.createTextNode(childData.dob));
+cellNationality.appendChild(document.createTextNode(childData.Nationality));
+cellCountry.appendChild(document.createTextNode(childData.country));
+cellPassportNumber.appendChild(document.createTextNode(childData.PassportNumber));
+
+cellPassportExpDate.appendChild(document.createTextNode(childData.PassportExpDate));
+
+ cellDoorNum.appendChild(document.createTextNode(childData.doorNum));
+
+ cellVillage.appendChild(document.createTextNode(childData.village));
+
+ cellPostOffice.appendChild(document.createTextNode(childData.PostOffice));
+
+ cellPostalCode.appendChild(document.createTextNode(childData.PostalCode));
+
+cellcountry.appendChild(document.createTextNode(childData.country));
+
+cellCity.appendChild(document.createTextNode(childData.City));
+
+cellMobileNum.appendChild(document.createTextNode(childData.MobileNum));
+
+cellAnMobileNum.appendChild(document.createTextNode(childData.MobileNum2));
+
+cellEmail.appendChild(document.createTextNode(childData.email));
+
+cellPassword.appendChild(document.createTextNode(childData.psw));
+
+   rowIndex = rowIndex + 1;
+    });
+  });
+   
+   
+   
+   
+  function Register(){
+      
+      
+   var fname = document.getElementById('fname').value;
+  
+   var lname = document.getElementById('lname').value;
+  
+  var g = document.getElementById('gender');
+  var gender=g.options[g.selectedIndex].text;
+  
+  
+   var NameOnCard = document.getElementById('NameOnCard').value;
+  
+   var dob = document.getElementById('dob').value;
+  
+   var N = document.getElementById('Nationality');
+  var Nationality=N.options[N.selectedIndex].text;
+  
+  
+   var c = document.getElementById('country');
+   
+  var country=c.options[c.selectedIndex].text;
+  
+  
+  
+   var PassportNumber = document.getElementById('PassportNumber').value;
+  
+   var PassportExpDate = document.getElementById('PassportExpDate').value;
+  
+   var doorNum = document.getElementById('doorNum').value;
+  
+   var village= document.getElementById('village').value;
+  
+   var PostOffice = document.getElementById('PostOffice').value;
+  
+   var PostalCode = document.getElementById('PostalCode').value;
+  
+   var c= document.getElementById('country');
+   
+
+   
+  var country=c.options[c.selectedIndex].text;
+
+
+
+   var City = document.getElementById('City').value;
+   
+   var MobileNumber= document.getElementById('MobikeNum').value;
+   
+   var MobileNumber2 = document.getElementById('MobileNum2').value;
+   
+   var email = document.getElementById('email').value;
+  
+   var Verifyemail = document.getElementById('email2').value;
+  
+   var Password = document.getElementById('psw').value;
+   
+   var VerifyPsw = document.getElementById('psw2').value;
+   
+  
+   var uid = firebase.database().ref().child('Register').push().key;
+   
+   var data = {
+    id: uid,
+    fname:fname,
+    lname:lname
+    // gender:gender
+   /* NameOnCard:NameOnCard,
+   // dob:dob
+   // Nationality:Nationality,
+    //country:country,
+    PassportNumber:PassportNumber,
+   // PassportExpNumber:PassportExpNumber,
+    doorNum:doorNun,
+    village:village,
+    PostOffice:PostOffice,
+    PostalCode:PostalCode,
+   // Country:country,
+   // City:City,
+    MobileNumber:MobileNum,
+    MobileNumber2:MobileNum2,
+    email:email,
+    Password:Password*/
+    
+    
+   }
+   
+   var updates = {};
+   updates['/Register/' + uid] = data;
+   firebase.database().ref().update(updates);
+   
+   alert('The user is created successfully!');
+   reload_page();
+  }
+  
+  
+  
+  
+  
+  
+/*  
+  function update_user(){
+   var user_name = document.getElementById('user_name').value;
+   var user_id = document.getElementById('user_id').value;
+
+   var data = {
+    id: user_id,
+    name: user_name
+   }
+   
+   var updates = {};
+   updates['/Users/' + user_id] = data;
+   firebase.database().ref().update(updates);
+   
+   alert('The user is updated successfully!');
+   
+   reload_page();
+  }
+  
+  function delete_user(){
+   var user_id = document.getElementById('user_id').value;
+  
+   firebase.database().ref().child('/Users/' + user_id).remove();
+   alert('The user is deleted successfully!');
+   reload_page();
+  }*/
+  
+  function reload_page(){
+   window.location.reload();
+  }
+  
+ </script>
+
+
+
+
+
+        
+        
+				
+	
+
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        
+    </body>
+</html>  
